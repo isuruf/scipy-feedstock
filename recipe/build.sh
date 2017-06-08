@@ -22,4 +22,7 @@ else
     unset LDFLAGS
 fi
 
+export CC="ccache $CC"
+export CXX="ccache $CXX"
+
 $PYTHON setup.py install --single-version-externally-managed --record=record.txt

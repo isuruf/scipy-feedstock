@@ -15,7 +15,7 @@ source:
 build:
   number: 201
   # We lack openblas on Windows, and therefore can't build scipy there either currently.
-  skip: true  # [win or (np!=112 and linux)]
+  skip: true  # [win]
   features:
     - blas_{{ variant }}
 
@@ -26,6 +26,7 @@ requirements:
     - python
     - setuptools
     - cython
+    - ccache
     - blas 1.1 {{ variant }}
     - libgfortran  # [linux]
     - openblas 0.2.19|0.2.19.*
