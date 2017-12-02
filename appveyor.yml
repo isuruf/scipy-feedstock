@@ -6,7 +6,7 @@ environment:
 
   BINSTAR_TOKEN:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    secure: ipv/06DzgA7pzz2CIAtbPxZSsphDtF+JFyoWRnXkn3O8j7oRe3rzqj3LOoq2DZp4
+    secure: mnyKh9WUccsl/wEyLwP/ImhWItQ7cBiukFPSLwd52px18jRYq4SyL/ETYediXrUu
 
   matrix:
     - TARGET_ARCH: x64
@@ -16,7 +16,6 @@ environment:
     - TARGET_ARCH: x64
       CONDA_PY: 36
       CONDA_INSTALL_LOCN: C:\\Miniconda36-x64
-
 
 # We always use a 64-bit machine, but can build x86 distributions
 # with the TARGET_ARCH variable.
@@ -57,4 +56,4 @@ build: off
 test_script:
     - conda build recipe --quiet
 deploy_script:
-    - cmd: upload_or_check_non_existence .\recipe conda-forge --channel=main
+    - cmd: upload_or_check_non_existence .\recipe isuruf --channel=flang
