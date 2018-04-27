@@ -64,6 +64,7 @@ source run_conda_forge_build_setup
 # run "conda smithy rerender" and this line be updated
 # automatically.
 /usr/bin/sudo -n yum install -y devtoolset-2-gcc-gfortran
+/usr/bin/sudo -n yum install -y devtoolset-2-gcc-gfortran
 
 
 conda build /recipe_root --quiet || exit 1
